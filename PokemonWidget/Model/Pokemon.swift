@@ -21,3 +21,5 @@ struct Pokemon : Identifiable, Codable {
 let pikachu = Pokemon(gorselIsmi: "pikachu", isim: "Pikachu", tur: "Mouse Pokemon")
 let pokeball = Pokemon(gorselIsmi: "pokeball", isim: "Poké Ball", tur: "Poké Ball")
 let bulbasaur = Pokemon(gorselIsmi: "bullbasaur", isim: "Bulbasaur", tur: "Seed Pokémon")
+
+let pokemonDizisi = [pikachu,pokeball,bulbasaur]

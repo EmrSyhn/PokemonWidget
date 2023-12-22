@@ -8,11 +8,26 @@
 import SwiftUI
 
 struct PokemonView: View {
+    var pokemon : Pokemon
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            OzelGorsel(imageText: "\(pokemon.gorselIsmi)").frame(width: 100,height: 100)
+            Spacer()
+            VStack(alignment:.leading) {
+                Text(pokemon.isim)
+                    .font(.largeTitle)
+                    .bold()
+                Text(pokemon.tur)
+                    .fontWeight(.heavy)
+            }
+            Spacer()
+        }.padding()
+            .frame(width: UIScreen.main.bounds.width)
+       
     }
 }
 
 #Preview {
-    PokemonView()
+    PokemonView(pokemon: pikachu)
 }

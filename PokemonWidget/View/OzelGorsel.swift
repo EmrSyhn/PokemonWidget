@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct OzelGorsel: View {
+    var imageText : String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image("\(imageText)")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            .overlay(Circle().stroke(Color.green,lineWidth: 5))
+            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    OzelGorsel()
+    OzelGorsel(imageText: "pikachu")
 }
